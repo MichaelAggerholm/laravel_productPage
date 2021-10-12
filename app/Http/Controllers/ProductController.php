@@ -15,8 +15,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = DB::select('select * from products');
-        return view('products.index',['products'=>$products]);
+//        $products = DB::select('select * from products');
+//        return view('products.index',['products'=>$products]);
+
+        return view('products.index', [
+            'products' => Product::latest()->filter(request(['search']))->paginate(6)->withQueryString()
+        ]);
     }
 
     /**
