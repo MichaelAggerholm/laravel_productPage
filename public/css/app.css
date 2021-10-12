@@ -1,0 +1,11 @@
+.productsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productChild {
+    flex: 1 0 23%;
+    margin: 0 10px;
+}
