@@ -18,10 +18,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -88,6 +90,11 @@
 {{--                                    </form>--}}
 {{--                                </div>--}}
 {{--                            </li>--}}
+                            <form class="d-flex">
+                                @csrf
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
                         @endguest
                     </ul>
                 </div>
